@@ -1,7 +1,7 @@
 # Swift-PM25
 
 
-一个基于Swift实现的PM2.5查询示例。基于```CocoaPods```构建。克隆后切换到```PM25```目录下，使用```pod install```安装依赖库。然后启动```PM25.xcworkspace```
+一个基于Swift实现的PM2.5查询示例。基于```CocoaPods```构建。克隆后切换到```Swift-PM25```目录下，使用```pod install```安装依赖库。然后启动```PM25.xcworkspace```
 
 
 # Screenshots
