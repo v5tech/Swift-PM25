@@ -10,7 +10,7 @@
 		BB2582365056463E85928D7E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D09EB63F3886439F96D357F5 /* libPods.a */; };
 		D20E94D0194C5E1200BDE77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D20E94CE194C5E1200BDE77A /* Assets.xcassets */; };
 		D20E94D1194C5E1200BDE77A /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E94CF194C5E1200BDE77A /* SCLAlertView.swift */; };
-		D28F5C08194C571700530487 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28F5C07194C571700530487 /* Main.storyboard */; };
+		D2541BCA194D878D00E5E71B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2541BC8194D878D00E5E71B /* Main.storyboard */; };
 		D28F5C0A194C572700530487 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F5C09194C572700530487 /* DetailsViewController.swift */; };
 		D2A4995B194C50B500D28651 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A49958194C50B500D28651 /* TFHpple.m */; };
 		D2A4995C194C50B500D28651 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A4995A194C50B500D28651 /* TFHppleElement.m */; };
@@ -38,7 +38,7 @@
 		D09EB63F3886439F96D357F5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20E94CE194C5E1200BDE77A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D20E94CF194C5E1200BDE77A /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
-		D28F5C07194C571700530487 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D2541BC9194D878D00E5E71B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D28F5C09194C572700530487 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		D2A49956194C50B500D28651 /* PM25-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PM25-Bridging-Header.h"; sourceTree = "<group>"; };
 		D2A49957194C50B500D28651 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
@@ -136,8 +136,8 @@
 				D2A73DC1194C4BC900FC1648 /* AppDelegate.swift */,
 				D2A73DC3194C4BC900FC1648 /* ViewController.swift */,
 				D28F5C09194C572700530487 /* DetailsViewController.swift */,
+				D2541BC8194D878D00E5E71B /* Main.storyboard */,
 				D2A49956194C50B500D28651 /* PM25-Bridging-Header.h */,
-				D28F5C07194C571700530487 /* Main.storyboard */,
 				D2A49955194C509000D28651 /* Hpple */,
 				D20E94CD194C5DE000BDE77A /* SCLAlertView */,
 				D2A73DBF194C4BC900FC1648 /* Supporting Files */,
@@ -263,7 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D28F5C08194C571700530487 /* Main.storyboard in Resources */,
+				D2541BCA194D878D00E5E71B /* Main.storyboard in Resources */,
 				D20E94D0194C5E1200BDE77A /* Assets.xcassets in Resources */,
 				D2A73DC9194C4BC900FC1648 /* Images.xcassets in Resources */,
 			);
@@ -343,6 +343,17 @@
 			targetProxy = D2A73DCF194C4BC900FC1648 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D2541BC8194D878D00E5E71B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2541BC9194D878D00E5E71B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D2A73DD6194C4BC900FC1648 /* Debug */ = {
