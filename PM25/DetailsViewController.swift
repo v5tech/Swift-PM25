@@ -258,9 +258,6 @@ class DetailsViewController: UIViewController {
         
         super.viewDidLoad()
         
-        //设置ImageView圆角
-        setImageView()
-        
         SVProgressHUD.show()
         
         self.title=city
@@ -269,6 +266,9 @@ class DetailsViewController: UIViewController {
 
         getData()
         
+        //设置ImageView圆角
+        setImageView()
+        
     }
 
     
@@ -276,27 +276,35 @@ class DetailsViewController: UIViewController {
         
         imageView1.layer.masksToBounds = true
         imageView1.layer.cornerRadius = 30;
+        imageView1.hidden = false
         
         imageView2.layer.masksToBounds = true
         imageView2.layer.cornerRadius = 30;
+        imageView2.hidden = false
         
         imageView3.layer.masksToBounds = true
         imageView3.layer.cornerRadius = 30;
+        imageView3.hidden = false
         
         imageView4.layer.masksToBounds = true
         imageView4.layer.cornerRadius = 30;
+        imageView4.hidden = false
         
         imageView5.layer.masksToBounds = true
         imageView5.layer.cornerRadius = 30;
+        imageView5.hidden = false
         
         imageView6.layer.masksToBounds = true
         imageView6.layer.cornerRadius = 30;
+        imageView6.hidden = false
         
         imageView7.layer.masksToBounds = true
         imageView7.layer.cornerRadius = 30;
+        imageView7.hidden = false
         
         imageView8.layer.masksToBounds = true
         imageView8.layer.cornerRadius = 30;
+        imageView8.hidden = false
         
     }
     
@@ -321,12 +329,13 @@ class DetailsViewController: UIViewController {
                 
             }else{
                 
-                SVProgressHUD.dismiss()
-                
+                //用于将NSData转化为NSString
                 //let str:String = NSString(data: data, encoding: NSUTF8StringEncoding) as String
                 
                 self.parseData(data)
 
+                SVProgressHUD.dismiss()
+                
             }
             
         })
