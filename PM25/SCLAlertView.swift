@@ -56,7 +56,11 @@ class SCLAlertView : UIView {
     var rootViewController: UIViewController
     var durationTimer: NSTimer!
     
-    init () {
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+    
+    override init () {
         // Content View
         self.contentView = UIView(frame: CGRectMake(0, kCircleHeight / 4, kWindowWidth, kWindowHeight))
         self.contentView.backgroundColor = UIColor(white: 1, alpha: 1);

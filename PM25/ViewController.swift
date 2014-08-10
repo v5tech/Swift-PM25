@@ -65,7 +65,7 @@ class ViewController: UITableViewController {
     }
     
     // #pragma mark - UITableViewDataSource
-    override func sectionIndexTitlesForTableView(tableView: UITableView!) -> AnyObject[]!{
+    override func sectionIndexTitlesForTableView(tableView: UITableView!) -> [AnyObject]!{
         
         return indexSet
         

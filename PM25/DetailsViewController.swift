@@ -204,51 +204,51 @@ class DetailsViewController: UIViewController {
     ]
     
     
-    @IBOutlet var lblCity : UILabel
+    @IBOutlet var lblCity : UILabel!
     
-    @IBOutlet var lblLevel : UILabel
+    @IBOutlet var lblLevel : UILabel!
 
-    @IBOutlet var lblUptime : UILabel
+    @IBOutlet var lblUptime : UILabel!
     
-    @IBOutlet var lblUnit : UILabel
+    @IBOutlet var lblUnit : UILabel!
     
-    @IBOutlet var lblAqi : UILabel
+    @IBOutlet var lblAqi : UILabel!
     
-    @IBOutlet var lblPm25 : UILabel
+    @IBOutlet var lblPm25 : UILabel!
     
-    @IBOutlet var lblPm10 : UILabel
+    @IBOutlet var lblPm10 : UILabel!
     
-    @IBOutlet var lblCo : UILabel
+    @IBOutlet var lblCo : UILabel!
     
-    @IBOutlet var lblNo2 : UILabel
+    @IBOutlet var lblNo2 : UILabel!
     
-    @IBOutlet var lblO31 : UILabel
+    @IBOutlet var lblO31 : UILabel!
     
-    @IBOutlet var lblO38 : UILabel
+    @IBOutlet var lblO38 : UILabel!
     
-    @IBOutlet var lblSo2 : UILabel
+    @IBOutlet var lblSo2 : UILabel!
     
-    @IBOutlet var lblPollutant : UILabel
+    @IBOutlet var lblPollutant : UILabel!
     
-    @IBOutlet var lblAffect : UILabel
+    @IBOutlet var lblAffect : UILabel!
     
-    @IBOutlet var lblAction : UILabel
+    @IBOutlet var lblAction : UILabel!
     
-    @IBOutlet var imageView1 : UIImageView
+    @IBOutlet var imageView1 : UIImageView!
 
-    @IBOutlet var imageView2 : UIImageView
+    @IBOutlet var imageView2 : UIImageView!
     
-    @IBOutlet var imageView3 : UIImageView
+    @IBOutlet var imageView3 : UIImageView!
     
-    @IBOutlet var imageView4 : UIImageView
+    @IBOutlet var imageView4 : UIImageView!
     
-    @IBOutlet var imageView5 : UIImageView
+    @IBOutlet var imageView5 : UIImageView!
     
-    @IBOutlet var imageView6 : UIImageView
+    @IBOutlet var imageView6 : UIImageView!
     
-    @IBOutlet var imageView7 : UIImageView
+    @IBOutlet var imageView7 : UIImageView!
     
-    @IBOutlet var imageView8 : UIImageView
+    @IBOutlet var imageView8 : UIImageView!
     
     var city:String?
     
@@ -319,7 +319,7 @@ class DetailsViewController: UIViewController {
             
             (response, data, error) -> Void in
             
-            if error? {
+            if error {
               
                 let alertView:UIAlertView = UIAlertView()
                 alertView.title="提示"
@@ -368,16 +368,16 @@ class DetailsViewController: UIViewController {
         
         var value:NSArray = doc.searchWithXPathQuery("//div[@class='span1']/div[@class='value']")
         
-        var captionStr:String[] = []
+        var captionStr:[String] = []
         
-        var val:String[] = []
+        var val:[String] = []
         
         for c:AnyObject in caption {
-            captionStr += (c as TFHppleElement).firstChild.content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            captionStr.append((c as TFHppleElement).firstChild.content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
         }
         
         for v:AnyObject in value {
-            val += (v as TFHppleElement).firstChild.content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            val.append((v as TFHppleElement).firstChild.content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
         }
         
         
