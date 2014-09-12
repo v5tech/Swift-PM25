@@ -262,7 +262,7 @@ class DetailsViewController: UIViewController {
         
         self.title=city
         
-        self.url=pm25Data[self.title]
+        self.url=pm25Data[self.title!]
 
         getData()
         
@@ -311,7 +311,7 @@ class DetailsViewController: UIViewController {
     
     func getData(){
         
-        var url: NSURL = NSURL(string: self.url)
+        var url: NSURL = NSURL(string: self.url!)
         
         let request: NSURLRequest = NSURLRequest(URL: url)
         
@@ -319,7 +319,7 @@ class DetailsViewController: UIViewController {
             
             (response, data, error) -> Void in
             
-            if error {
+            if (error != nil) {
               
                 let alertView:UIAlertView = UIAlertView()
                 alertView.title="提示"

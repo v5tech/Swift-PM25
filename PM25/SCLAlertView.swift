@@ -105,7 +105,7 @@ class SCLAlertView : UIView {
         self.doneButton.layer.cornerRadius = 3
         self.doneButton.layer.masksToBounds = true
         self.doneButton.setTitle("Done", forState: UIControlState.Normal)
-        self.doneButton.titleLabel.font = UIFont(name: kDefaultFont, size: 14)
+        self.doneButton.titleLabel!.font = UIFont(name: kDefaultFont, size: 14)
         self.contentView.addSubview(self.doneButton)
         
         // Root view controller

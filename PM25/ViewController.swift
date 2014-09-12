@@ -58,14 +58,14 @@ class ViewController: UITableViewController {
     
     
     // #pragma mark - UITableViewDataSource
-    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         return indexSet.count
         
     }
     
     // #pragma mark - UITableViewDataSource
-    override func sectionIndexTitlesForTableView(tableView: UITableView!) -> [AnyObject]!{
+    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [AnyObject]!{
         
         return indexSet
         
@@ -73,55 +73,56 @@ class ViewController: UITableViewController {
     
     
     // #pragma mark - UITableViewDataSource
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int{
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
         return dataSet[section].count
         
     }
     
     // #pragma mark - UITableViewDataSource
-    override func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String!{
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String{
         
         return indexSet[section]
         
     }
     
     
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!{
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
         let reuseIdentifier = "Cell"
         
         var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as  UITableViewCell
         
-        if cell == nil {
-            cell = UITableViewCell(style:.Default,reuseIdentifier:reuseIdentifier)
-        }
+//        if cell == nil {
+//            cell = UITableViewCell(style:.Default,reuseIdentifier:reuseIdentifier)
+//        }
         
-        cell.textLabel.text = dataSet[indexPath.section][indexPath.row]
+        cell.textLabel!.text = dataSet[indexPath.section][indexPath.row]
         
         return cell
         
     }
     
     // #pragma mark - UITableViewDelegate
-    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!){
-        
-        //显示DetailsViewController
-        
-        //let detailsViewController:DetailsViewController = DetailsViewController()
-        
-        //detailsViewController.city = tableData[indexPath.row] as String
-        
-        //self.navigationController.pushViewController(detailsViewController, animated: true)
-        
-    }
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+//        
+//        显示DetailsViewController
+//        
+//        let detailsViewController:DetailsViewController = DetailsViewController()
+//        
+//        detailsViewController.city = tableData[indexPath.row] as String
+//        
+//        self.navigationController.pushViewController(detailsViewController, animated: true)
+//        
+//    }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!){
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
         
         if segue.identifier == "Detail" {
             if segue.destinationViewController is DetailsViewController {
                 var detailsViewController:DetailsViewController = segue.destinationViewController as DetailsViewController
-                detailsViewController.city = dataSet[self.tableView.indexPathForSelectedRow().section][self.tableView.indexPathForSelectedRow().row] as String
+                var index = self.tableView.indexPathForSelectedRow()
+                detailsViewController.city = dataSet[index!.section][index!.row] as String
             }
         }
         
